@@ -18,12 +18,13 @@ export const ImageSlider = ({
   const [errorMsg, setErrorMsg] = useState('');
 
   // State management to track the loading state to get image list
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Retrieve images from the specified URL
     async function getImages() {
       try {
+        setIsLoading(true);
         const images = await fetch(`${url}?limit=${numOfImages}`);
         const imageContent = await images.json();
         setImageList(imageContent);
