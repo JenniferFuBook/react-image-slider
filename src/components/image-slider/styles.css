@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide-image {
+  display: none;
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 1em;
+  display: flex;
+  gap: 1em
+}
+
+.dot {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+}
+
+.dot-active {
+  background-color: red;
+}
+
+.dot-inactive {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  color: red;
+  font-size: 5em;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 1em;
+}
+
+.arrow-right {
+  right: 1em;
+}
